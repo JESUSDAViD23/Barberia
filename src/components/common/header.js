@@ -24,13 +24,13 @@ function AppHeader() {
         </div>
         <div className="mobileHidden">
           <Anchor targetOffset="65">
-            <Link href="#hero" title="Inicio" />
-            <Link href="#about" title="Acercade" />
-            <Link href="#feature" title="Caracteristicas" />
-            <Link href="#works" title="Como trabajamos" />
-            <Link href="#faq" title="Preguntas frecuentes" />
-            <Link href="#pricing" title="Precio" />
-            <Link href="#contact" title="Contacto" />
+            <Link href="#hero" title="Home" />
+            <Link href="#about" title="About" />
+            <Link href="#feature" title="Features" />
+            <Link href="#works" title="How it works" />
+            <Link href="#faq" title="FAQ" />
+            <Link href="#pricing" title="Pricing" />
+            <Link href="#contact" title="Contact" />
           </Anchor>
         </div>
         <div className="mobileVisible">
@@ -43,13 +43,13 @@ function AppHeader() {
             onClose={onClose}
             visible={visible}
           >
-            <Anchor targetOffset="25">
-              <Link href="#hero" title="Inicio" />
-              <Link href="#about" title="Acerca de" />
-              <Link href="#feature" title="Caracteristicas" />
-              <Link href="#works" title="Como trabajamos" />
-              <Link href="#faq" title="Preguntas frecuentes" />
-              <Link href="#pricing" title="Precios" />
+            <Anchor targetOffset="65">
+              <Link href="#hero" title="Home" />
+              <Link href="#about" title="About" />
+              <Link href="#feature" title="Features" />
+              <Link href="#works" title="How it works" />
+              <Link href="#faq" title="FAQ" />
+              <Link href="#pricing" title="Pricing" />
               <Link href="#contact" title="Contact" />
             </Anchor>
           </Drawer>
