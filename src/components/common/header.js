@@ -15,12 +15,7 @@ function AppHeader() {
     setVisible(false);
   };
 
-  const handleClick = () => {
-    // Cierra el Drawer cuando se hace clic en un enlace en dispositivos móviles
-    if (window.innerWidth < 768) {
-      onClose();
-    }
-  };
+
 
   return (
     <div className="container-fluid">
@@ -31,13 +26,13 @@ function AppHeader() {
         </div>
         <div className="mobileHidden">
           <Anchor targetOffset="65">
-            <Link href="#hero" title="Home" />
-            <Link href="#about" title="About" />
-            <Link href="#feature" title="Features" />
-            <Link href="#works" title="How it works" />
-            <Link href="#faq" title="FAQ" />
-            <Link href="#pricing" title="Pricing" />
-            <Link href="#contact" title="Contact" />
+          <Link href="#hero" title="Inicio" />
+            <Link href="#about" title="Acerca de" />
+            <Link href="#feature" title="Características" />
+            <Link href="#works" title="Cómo trabajamos" />
+            <Link href="#faq" title="Preguntas frecuentes" />
+            <Link href="#pricing" title="Precios" />
+            <Link href="#contact" title="Contacto" />
           </Anchor>
         </div>
         <div className="mobileVisible">
@@ -45,19 +40,20 @@ function AppHeader() {
             <i className="fas fa-bars"></i>
           </Button>
           <Drawer
+            width={180} 
             placement="right"
             closable={false}
             onClose={onClose}
             visible={visible}
           >
             <Anchor targetOffset="65">
-              <Link href="#hero" title="Inicio" onClick={handleClick} />
-              <Link href="#about" title="Acerca de" onClick={handleClick} />
-              <Link href="#feature" title="Características" onClick={handleClick} />
-              <Link href="#works" title="Cómo trabajamos" onClick={handleClick} />
-              <Link href="#faq" title="Preguntas frecuentes" onClick={handleClick} />
-              <Link href="#pricing" title="Precios" onClick={handleClick} />
-              <Link href="#contact" title="Contacto" onClick={handleClick} />
+              <Link href="#hero" title="Inicio"/>
+              <Link href="#about" title="Acerca de"  />
+              <Link href="#feature" title="Características"  />
+              <Link href="#works" title="Cómo trabajamos"  />
+              <Link href="#faq" title="Preguntas frecuentes"  />
+              <Link href="#pricing" title="Precios"  />
+              <Link href="#contact" title="Contacto"  />
             </Anchor>
           </Drawer>
         </div>
