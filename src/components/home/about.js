@@ -18,8 +18,8 @@ const items = [
   {
     key: '3',
     icon: <ShopOutlined />,
-    title: 'Simplified Workflow',
-    content: ' estamos orgullosos de expandir nuestra presencia para servirte mejor. Contamos con varias sucursales estratégicamente ubicadas para llevar la experiencia única de Barber Man a tu vecindario.',
+    title: 'Cerca de tí',
+    content: 'Estamos orgullosos de expandir nuestra presencia para servirte mejor. Contamos con varias sucursales estratégicamente ubicadas para llevar la experiencia única de Barber Man a tu vecindario.',
   },
 ]
 
