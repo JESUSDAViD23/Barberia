@@ -1,0 +1,57 @@
+import React from 'react';
+import { useState } from 'react';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+import Modal from 'react-bootstrap/Modal';
+import Button from 'react-bootstrap/Button';
+//NOTIFICACIONES
+import { getToken } from "firebase/messaging";
+import { messaging } from '../server/firebase/Firebase';
+
+const Notification = () => {
+    const [show, setShow] = useState(false);
+
+    const ActiveMessage = async() => {
+        try {
+            const token = await getToken(messaging, {
+                vapidKey: "BEY4zuRXO9HwlyAlaVrjmd0OtI8hLZGbEfRGTRhVUaA653eOnYASm6u_ubHnHEh_psGIoniU4uuCNHv25AbJnVU"
+            })
+            if(token){
+                console.log("Todo bien", token);
+            }
+            if(!token){
+                console.log("No hay token");
+            }
+            setShow(false);
+        } catch (error) {
+            console.log("Error al generar el token", error.code);
+        }
+    }
+
+    return (
+        <>
+            <NavDropdown.Item onClick={() => setShow(true)}>Notificaciones</NavDropdown.Item>
+            <Modal
+                show={show}
+                onHide={() => setShow(false)}
+                dialogClassName="modal-90w"
+                aria-labelledby="example-custom-modal-styling-title"
+            >
+                <Modal.Header closeButton>
+                <Modal.Title id="example-custom-modal-styling-title">
+                    Notificaciónes
+                </Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    <p>
+                        Desea recibir notificaciones para estar al tanto de nuestros productos y promociones.
+                    </p>
+                    <Button variant="primary" onClick={ActiveMessage}>
+                        Activar notificaciones
+                    </Button>
+                </Modal.Body>
+            </Modal>
+        </>
+    );
+}
+
+export default Notification;

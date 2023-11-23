@@ -71,7 +71,7 @@ function AppPricing() {
                 <p>{item.content[0].support}</p>
                 <p>{item.content[0].backup}</p>
                 <p>{item.content[0].access}</p>
-                <Button type="primary" size="large"><i className="fab fa-telegram-plane"></i> Agenda tu cita</Button>
+                <Button style={{backgroundColor:'#e1dbc8'}} type="primary" size="large"><i className="fab fa-telegram-plane"></i> Agenda tu cita</Button>
               </Card>
             </List.Item>
           )}

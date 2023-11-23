@@ -33,8 +33,8 @@ function AppHero() {
                 <h3>{item.title}</h3>
                 <p>{item.content}</p>
                 <div className="btnHolder">
-                  <Button type="primary" size="large">Agendar cita</Button>
-                  <Button size="large"><CalendarOutlined /> </Button>
+                  <Button type="primary" style={{backgroundColor:'#e1dbc8'}} size="large">Agendar cita <CalendarOutlined /></Button>
+                  
                 </div>
               </div>
             </div>  

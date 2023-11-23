@@ -49,7 +49,7 @@ title holder
 .titleHolder:after {
   transform: translateX(-50%);
   content: '';
-  background: #1890ff;
+  background: #e1dbc8;
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -117,7 +117,7 @@ header
 .header .ant-anchor-link:before,
 .header .ant-anchor-link:after {
   content: '';
-  background: #1890ff;
+  background: #e1dbc8;
   width: 1px;
   position: absolute;
   top: 2px;
@@ -158,7 +158,7 @@ header
 .header .ant-menu li.ant-menu-item:before,
 .header .ant-menu li.ant-menu-item:after {
   content: '';
-  background: #1890ff;
+  background: #e1dbc8;
   width: 1px;
   position: absolute;
   top: 2px;
@@ -180,7 +180,7 @@ header
 
 .header .ant-menu li.ant-menu-item-selected,
 .header .ant-menu li.ant-menu-item:hover {
-  color: #1890ff;
+  color: #e1dbc8;
   background: none;
 }
 
@@ -221,7 +221,7 @@ hero
 }
 
 .heroBlock .slick-dots li.slick-active button {
-  background: #1890ff !important;
+  background: #e1dbc8 !important;
 }
 
 .heroBlock .content {
@@ -271,7 +271,7 @@ about
 
 .aboutBlock .icon {
   font-size: 40px;
-  color: #1890ff;
+  color: #e1dbc8;
   margin: 0 0 10px;
 }
 
@@ -403,7 +403,7 @@ footer
 }
 
 .footer .fas {
-  color: #1890ff;
+  color: #e1dbc8;
   font-size: 28px;
   margin: 0 5px 0 0;
 }
@@ -430,7 +430,7 @@ footer
 }
 
 .footer .socials a:hover {
-  color: #1890ff;
+  color: #e1dbc8;
 }
 
 .footer .goTop:hover {
