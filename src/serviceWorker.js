@@ -42,8 +42,8 @@ export function register(config) {
         // service worker/PWA documentation.
         navigator.serviceWorker.ready.then(() => {
           console.log(
-            'This web app is being served cache-first by a service ' +
-              'worker. To learn more, visit https://bit.ly/CRA-PWA'
+            'Esta web es servida por medio de cache-first de un service ' +
+              'worker.'
           );
         });
       } else {
@@ -70,8 +70,7 @@ function registerValidSW(swUrl, config) {
               // but the previous service worker will still serve the older
               // content until all client tabs are closed.
               console.log(
-                'New content is available and will be used when all ' +
-                  'tabs for this page are closed. See https://bit.ly/CRA-PWA.'
+                'Nuevo contenido disponible y será usado'
               );
 
               // Execute callback
@@ -82,7 +81,7 @@ function registerValidSW(swUrl, config) {
               // At this point, everything has been precached.
               // It's the perfect time to display a
               // "Content is cached for offline use." message.
-              console.log('Content is cached for offline use.');
+              console.log('Contenido es cacheado para su uso en modo Offline.');
 
               // Execute callback
               if (config && config.onSuccess) {
@@ -94,7 +93,7 @@ function registerValidSW(swUrl, config) {
       };
     })
     .catch(error => {
-      console.error('Error during service worker registration:', error);
+      console.error('Error durante el registro del service worker:', error);
     });
 }
 
@@ -123,7 +122,7 @@ function checkValidServiceWorker(swUrl, config) {
     })
     .catch(() => {
       console.log(
-        'No internet connection found. App is running in offline mode.'
+        'No hay conexion a internet. La apicación será ejecutada de forma offline.'
       );
     });
 }
@@ -139,3 +138,45 @@ export function unregister() {
       });
   }
 }
+
+
+const CACHE_NAME = 'my-cache-v1';
+
+const cacheFiles = [
+  // Agrega aquí los archivos que deseas almacenar en caché
+  '/',
+  './components/common/footer.js',
+  './components/common/header.js'
+  
+  // ...otros archivos estáticos
+];
+
+self.addEventListener('install', (event) => {
+  event.waitUntil(
+    caches.open(CACHE_NAME).then((cache) => {
+      return cache.addAll(cacheFiles);
+    })
+  );
+});
+
+self.addEventListener('fetch', (event) => {
+  event.respondWith(
+    caches.match(event.request).then((response) => {
+      return response || fetch(event.request);
+    })
+  );
+});
+
+self.addEventListener('activate', (event) => {
+  event.waitUntil(
+    caches.keys().then((cacheNames) => {
+      return Promise.all(
+        cacheNames.map((name) => {
+          if (name !== CACHE_NAME) {
+            return caches.delete(name);
+          }
+        })
+      );
+    })
+  );
+});
