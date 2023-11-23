@@ -23,8 +23,8 @@ class AppWorks extends React.Component {
       <div id="works" className="block worksBlock">
         <div className="container-fluid">
           <div className="titleHolder">
-            <h2>How it works</h2>
-            <p>check our latest video to know how it works</p>
+            <h2>Como trabajamos</h2>
+            <p>Observa nuestro ultimi video</p>
           </div>
           <div className="contentHolder">
             <Button size="large" onClick={this.showModal}><i className="fas fa-play"></i></Button>
@@ -36,7 +36,7 @@ class AppWorks extends React.Component {
             footer={null}
             destroyOnClose = {true}
           >
-            <iframe title="Woocommerce Tutorial" width="100%" height="350" src="https://www.youtube.com/embed/8f8_JYIzOno?list=PLiUrl-SQRR7LQINGQGE99pXWDuKq4SxfU"></iframe>
+            <iframe title="Woocommerce Tutorial" width="100%" height="350" src="https://www.youtube.com/watch?v=Nr68e_Y1-po"></iframe>
           </Modal>
         </div>
       </div>

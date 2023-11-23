@@ -30,9 +30,7 @@ function AppHeader() {
             <Link href="#about" title="Acerca de" />
             <Link href="#feature" title="Características" />
             <Link href="#works" title="Cómo trabajamos" />
-            <Link href="#faq" title="Preguntas frecuentes" />
             <Link href="#pricing" title="Precios" />
-            <Link href="#contact" title="Contacto" />
           </Anchor>
         </div>
         <div className="mobileVisible">
@@ -51,9 +49,7 @@ function AppHeader() {
               <Link href="#about" title="Acerca de"  />
               <Link href="#feature" title="Características"  />
               <Link href="#works" title="Cómo trabajamos"  />
-              <Link href="#faq" title="Preguntas frecuentes"  />
               <Link href="#pricing" title="Precios"  />
-              <Link href="#contact" title="Contacto"  />
             </Anchor>
           </Drawer>
         </div>
