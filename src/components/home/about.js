@@ -1,25 +1,25 @@
 import React from 'react';
-
+import { DollarOutlined, SmileOutlined, ShopOutlined} from '@ant-design/icons'
 import { Row, Col } from 'antd';
 
 const items = [
   {
     key: '1',
-    icon: <i className="fas fa-chart-pie"></i>,
-    title: 'High Performance',
-    content: 'Elevate your game with high-performance technology. Enjoy seamless, efficient and powerful experiences.',
+    icon: <DollarOutlined />,
+    title: 'Precios Accesibles',
+    content: ' Creemos que la calidad no debe comprometerse por el precio. Nos esforzamos por ofrecer servicios de barbería excepcionales a precios accesibles.  ',
   },
   {
     key: '2',
-    icon: <i className="fas fa-desktop"></i>,
-    title: 'Flat Design',
-    content: 'Simplify your aesthetic with flat design. Clean, modern, and minimal design elements for a fresh look.',
+    icon: <SmileOutlined />,
+    title: 'Buen ambiente',
+    content: 'No solo nos dedicamos a perfeccionar cortes y estilos, sino que también creamos un ambiente acogedor y amigable que te hará sentir como en casa.',
   },
   {
     key: '3',
-    icon: <i className="fas fa-database"></i>,
+    icon: <ShopOutlined />,
     title: 'Simplified Workflow',
-    content: 'Streamline your work with our intuitive and efficient workflow solution. Get more done, faster and with ease.',
+    content: ' estamos orgullosos de expandir nuestra presencia para servirte mejor. Contamos con varias sucursales estratégicamente ubicadas para llevar la experiencia única de Barber Man a tu vecindario.',
   },
 ]
 
@@ -28,10 +28,10 @@ function AppAbout() {
     <div id="about" className="block aboutBlock">
       <div className="container-fluid">
         <div className="titleHolder">
-          <h2>About Us</h2>
+          <h2>Acerca de</h2>
         </div>
         <div className="contentHolder">
-          <p>Technology has revolutionized the way we live and work, providing us with new and innovative ways to solve problems, improve efficiency, and make our lives easier. From artificial intelligence to cloud computing, the rapid advancements in technology are changing the way we interact with the world around us. As we continue to push the boundaries of what is possible, we can expect new and exciting developments that will further shape the future of our world. Whether it's in healthcare, education, or any other industry, technology has the power to make a positive impact and create a better future for all of us. </p>
+          <p>Bienvenido a Barber Man, donde la tradición se encuentra con la modernidad. En nuestro espacio, nos dedicamos a proporcionar experiencias de cuidado personal excepcionales. Nuestro equipo de barberos altamente capacitados combina la maestría en cortes clásicos con las últimas tendencias. En Barber Man, no solo obtendrás un corte de pelo impecable, sino también una experiencia relajante y personalizada que refleje tu estilo único. ¡Descubre la diferencia de una barbería que se preocupa por tu imagen y bienestar! </p>
         </div>
         <Row gutter={[16, 16]}>   
           {items.map(item => {
