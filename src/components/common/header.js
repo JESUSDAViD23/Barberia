@@ -24,7 +24,7 @@ function AppHeader() {
         </div>
         <div className="mobileHidden">
           <Anchor targetOffset="65">
-            <Link href="#hero" title="Home" />
+            <Link href="#hero" title="Inicio" />
             <Link href="#about" title="About" />
             <Link href="#feature" title="Features" />
             <Link href="#works" title="How it works" />
