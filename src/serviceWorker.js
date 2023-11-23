@@ -69,6 +69,7 @@ self.addEventListener('message', (event) => {
   }
 });
 
+
 // self.addEventListener('install', e => {
 //   const cacheProm = caches.open('app-shell')
 //   .then( cache => {
@@ -83,3 +84,33 @@ self.addEventListener('message', (event) => {
 //   e.waitUntil( cacheProm );
 // })
 // Any other custom service worker logic can go here.
+
+const CACHE_NAME = 'my-cache';
+
+self.addEventListener('install', (event) => {
+  event.waitUntil(
+    caches.open(CACHE_NAME).then((cache) => {
+      return cache.addAll([
+        // Lista de URLs de recursos que quieres precachear al instalar el Service Worker
+        '/src/components/common/footer.js',
+        './components/common/header.js',
+        './components/home/about.js',
+        './components/home/contact.js',
+        './components/home/faq.js',
+        './components/home/feature.js',
+        './components/home/hero.js',
+        './components/home/pricing.js',
+        './components/home//works.js'
+        // Agrega más recursos aquí
+      ]);
+    })
+  );
+});
+
+self.addEventListener('fetch', (event) => {
+  event.respondWith(
+    fetch(event.request).catch(() => {
+      return caches.match(event.request);
+    })
+  );
+});
