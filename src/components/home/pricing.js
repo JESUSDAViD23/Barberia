@@ -11,21 +11,21 @@ const data = [
         space: 'Corte de cabello',
         user: 'afeitado o recorte de barba',
         support: '',
-        backup: 'Safe, reliable backup',
-        access: 'Access from anywhere'
+        backup: '',
+        access: ''
       }
     ]
   },
   {
-    title: 'Premium',
+    title: 'SCALPER MAN',
     content: [
       {
-        price: '£59.99',
-        space: '5 GB of space',
-        user: '5 users',
-        support: '24/7 support',
-        backup: 'Safe, reliable backup',
-        access: 'Access from anywhere'
+        price: '$800',
+        space: 'Corte de cabello',
+        user: 'arreglo de barba ',
+        support: 'facial',
+        backup: '',
+        access: ''
       }
     ]
   },
@@ -36,9 +36,9 @@ const data = [
         price: '$450',
         space: 'Manicure',
         user: 'pedicure',
-        support: '24/7 support',
-        backup: 'Safe, reliable backup',
-        access: 'Access from anywhere'
+        support: '',
+        backup: '',
+        access: ''
       }
     ]
   }
@@ -49,17 +49,17 @@ function AppPricing() {
     <div id="pricing" className="block pricingBlock bgGray">
       <div className="container-fluid">
         <div className="titleHolder">
-          <h2>Choose a plan to fit your needs</h2>
+          <h2>Nuestros paquetes de promocion</h2>
         </div>
         <List
           grid={{
             gutter: 10,
             xs: 1,
             sm: 1,
-            md: 2,
-            lg: 2,
-            xl: 2,
-            xxl: 2,
+            md: 3,
+            lg: 3,
+            xl: 3,
+            xxl: 3,
           }}
           dataSource={data}
           renderItem={item => (
@@ -71,7 +71,7 @@ function AppPricing() {
                 <p>{item.content[0].support}</p>
                 <p>{item.content[0].backup}</p>
                 <p>{item.content[0].access}</p>
-                <Button type="primary" size="large"><i className="fab fa-telegram-plane"></i> Get Started</Button>
+                <Button type="primary" size="large"><i className="fab fa-telegram-plane"></i> Agenda tu cita</Button>
               </Card>
             </List.Item>
           )}
