@@ -22,49 +22,49 @@ function AppFeature() {
           <Col xs={{ span: 24 }} sm={{ span: 12 }} md={{ span: 8 }}>
             <Card
               hoverable
-              cover={<img alt="Modern Design" src='https://cdn2.hubspot.net/hubfs/2356021/Barberia.png' />}
+              cover={<img alt="Modern Design" height='190px' src='https://cdn2.hubspot.net/hubfs/2356021/Barberia.png' />}
             >
-              <Meta title="Modern Design" />
+              <Meta title="Corte de barba y bigote" />
             </Card>
           </Col>
           <Col xs={{ span: 24 }} sm={{ span: 12 }} md={{ span: 8 }}>
             <Card
               hoverable
-              cover={<img alt="Test" src='https://lh3.googleusercontent.com/p/AF1QipPktQdB54Ym6ftdwOnnio-WerDRecvYXyqCZCkk=w1080-h608-p-no-v0' />}
+              cover={<img alt="Test" height='190px' src='https://lh3.googleusercontent.com/p/AF1QipPktQdB54Ym6ftdwOnnio-WerDRecvYXyqCZCkk=w1080-h608-p-no-v0' />}
             >
-              <Meta title="Clean and Elegant" />
+              <Meta title="Local limpio y elegante" />
             </Card>
           </Col>
           <Col xs={{ span: 24 }} sm={{ span: 12 }} md={{ span: 8 }}>
             <Card
               hoverable
-              cover={<img alt="Test" src='https://www.shortcuts.es/wp-content/uploads/2017/07/June-barber-blog-image.jpg' />}
+              cover={<img alt="Test" height='190px' src='https://www.shortcuts.es/wp-content/uploads/2017/07/June-barber-blog-image.jpg' />}
             >
-              <Meta title="Great Support" />
+              <Meta title="Personal Capacitado" />
             </Card>
           </Col>
           <Col xs={{ span: 24 }} sm={{ span: 12 }} md={{ span: 8 }}>
             <Card
               hoverable
-              cover={<img alt="Test" src={image4} />}
+              cover={<img alt="Test" height='190px' src='https://panoraview.com/wp-content/uploads/2023/03/logos-de-barberia-modernos-como-realizarlos-y-ejemplos.jpg' />}
             >
-              <Meta title="Easy to customise" />
+              <Meta title="Herramientas de alta calidad" />
             </Card>
           </Col>
           <Col xs={{ span: 24 }} sm={{ span: 12 }} md={{ span: 8 }}>
             <Card
               hoverable
-              cover={<img alt="Test" src={image5} />}
+              cover={<img alt="Test" height='190px' src='https://mejorjuguete.com/wp-content/uploads/2022/07/320243_03_ig_smoby_roleplay_beauty_PT02.jpg' />}
             >
-              <Meta title="Unlimited Features" />
+              <Meta title="Venta de productos" />
             </Card>
           </Col>
           <Col xs={{ span: 24 }} sm={{ span: 12 }} md={{ span: 8 }}>
             <Card
               hoverable
-              cover={<img alt="Test" src={image6} />}
+              cover={<img alt="Test" height='190px' src='https://www.flowww.es/hubfs/Campa%C3%B1a%20marketing%20Octubre%20Q4/BLOG_ES/como-hacer-promociones-que-traigan-ingresos-para-tu-barberia.png' />}
             >
-              <Meta title="Advanced Options" />
+              <Meta title="Ambiente sano" />
             </Card>
           </Col>
         </Row>

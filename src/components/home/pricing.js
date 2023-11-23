@@ -4,13 +4,13 @@ import { List, Card, Button } from 'antd';
 
 const data = [
   {
-    title: 'Basic',
+    title: 'SCALPER GROOMING',
     content: [
       {
-        price: '£29.99',
-        space: '1 GB of space',
-        user: '1 user',
-        support: '24/7 support',
+        price: '$595',
+        space: 'Corte de cabello',
+        user: 'afeitado o recorte de barba',
+        support: '',
         backup: 'Safe, reliable backup',
         access: 'Access from anywhere'
       }
@@ -30,12 +30,12 @@ const data = [
     ]
   },
   {
-    title: 'Enterprise',
+    title: 'SCALPER SPA',
     content: [
       {
-        price: '£99.99',
-        space: 'Unlimited space',
-        user: '15 users',
+        price: '$450',
+        space: 'Manicure',
+        user: 'pedicure',
         support: '24/7 support',
         backup: 'Safe, reliable backup',
         access: 'Access from anywhere'
@@ -53,13 +53,13 @@ function AppPricing() {
         </div>
         <List
           grid={{
-            gutter: 16,
+            gutter: 10,
             xs: 1,
             sm: 1,
-            md: 3,
-            lg: 3,
-            xl: 3,
-            xxl: 3,
+            md: 2,
+            lg: 2,
+            xl: 2,
+            xxl: 2,
           }}
           dataSource={data}
           renderItem={item => (
