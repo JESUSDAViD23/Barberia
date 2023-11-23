@@ -15,6 +15,13 @@ function AppHeader() {
     setVisible(false);
   };
 
+  const handleClick = () => {
+    // Cierra el Drawer cuando se hace clic en un enlace en dispositivos móviles
+    if (window.innerWidth < 768) {
+      onClose();
+    }
+  };
+
   return (
     <div className="container-fluid">
       <div className="header">
@@ -44,13 +51,13 @@ function AppHeader() {
             visible={visible}
           >
             <Anchor targetOffset="65">
-              <Link href="#hero" title="Home" />
-              <Link href="#about" title="About" />
-              <Link href="#feature" title="Features" />
-              <Link href="#works" title="How it works" />
-              <Link href="#faq" title="FAQ" />
-              <Link href="#pricing" title="Pricing" />
-              <Link href="#contact" title="Contact" />
+              <Link href="#hero" title="Inicio" onClick={handleClick} />
+              <Link href="#about" title="Acerca de" onClick={handleClick} />
+              <Link href="#feature" title="Características" onClick={handleClick} />
+              <Link href="#works" title="Cómo trabajamos" onClick={handleClick} />
+              <Link href="#faq" title="Preguntas frecuentes" onClick={handleClick} />
+              <Link href="#pricing" title="Precios" onClick={handleClick} />
+              <Link href="#contact" title="Contacto" onClick={handleClick} />
             </Anchor>
           </Drawer>
         </div>
