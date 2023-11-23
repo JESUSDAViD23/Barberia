@@ -1,6 +1,6 @@
 import React from 'react';
 
-import image1 from '../../assets/images/modern-design.jpg';
+//import image1 from '../../assets/images/modern-design.jpg';
 import image2 from '../../assets/images/clean-design.jpg';
 import image3 from '../../assets/images/great-support.jpg';
 import image4 from '../../assets/images/easy-customise.jpg';
@@ -22,7 +22,7 @@ function AppFeature() {
           <Col xs={{ span: 24 }} sm={{ span: 12 }} md={{ span: 8 }}>
             <Card
               hoverable
-              cover={<img alt="Modern Design" src={image1} />}
+              cover={<img alt="Modern Design" src='https://cdn2.hubspot.net/hubfs/2356021/Barberia.png' />}
             >
               <Meta title="Modern Design" />
             </Card>
@@ -30,7 +30,7 @@ function AppFeature() {
           <Col xs={{ span: 24 }} sm={{ span: 12 }} md={{ span: 8 }}>
             <Card
               hoverable
-              cover={<img alt="Test" src={image2} />}
+              cover={<img alt="Test" src='https://lh3.googleusercontent.com/p/AF1QipPktQdB54Ym6ftdwOnnio-WerDRecvYXyqCZCkk=w1080-h608-p-no-v0' />}
             >
               <Meta title="Clean and Elegant" />
             </Card>
@@ -38,7 +38,7 @@ function AppFeature() {
           <Col xs={{ span: 24 }} sm={{ span: 12 }} md={{ span: 8 }}>
             <Card
               hoverable
-              cover={<img alt="Test" src={image3} />}
+              cover={<img alt="Test" src='https://www.shortcuts.es/wp-content/uploads/2017/07/June-barber-blog-image.jpg' />}
             >
               <Meta title="Great Support" />
             </Card>
