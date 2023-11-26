@@ -4,6 +4,22 @@ import { CalendarOutlined } from '@ant-design/icons';
 
 import { Carousel } from 'antd';
 
+import { messaging } from '../../../src/firebase';
+import { getToken, onMessage } from 'firebase/messaging';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+
+const activarMensajes = async ()=> {
+  const token = await getToken(messaging,{
+    vapidKey: "BPNiEih4H35tIMwFHeaD-7Q7tz1mNXscAhl_HKWbav1kNu7XRbJS5IIREIrkMax0qQnJk8ZuOF5_di2CfSOcOlM"
+  }).catch(error => console.log("Tuviste un error al generar el token, papá"));
+
+
+  if(token) console.log("tu token:",token);
+  if(!token) console.log("no tienes token, rey");
+}
+
 const items = [
   {
     key: '1',
@@ -33,7 +49,7 @@ function AppHero() {
                 <h3>{item.title}</h3>
                 <p>{item.content}</p>
                 <div className="btnHolder">
-                  <Button type="primary" style={{backgroundColor:'#e1dbc8'}} size="large">Agendar cita <CalendarOutlined /></Button>
+                  <Button type="primary" onClick={activarMensajes} style={{backgroundColor:'#e1dbc8'}} size="large">Activar Mensaje <CalendarOutlined /></Button>
                   
                 </div>
               </div>

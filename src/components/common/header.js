@@ -72,6 +72,7 @@ function AppHeader() {
               <Link href="#feature" title="Características"  />
               <Link href="#works" title="Cómo trabajamos"  />
               <Link href="#pricing" title="Precios"  />
+              <ToastContainer/><Link href='#' onClick={activarMensajes}>Activar notificaciones</Link>
               <ToastContainer><Button type='primary' style={{backgroundColor:'#e1dbc8',color:'black'}} onClick={activarMensajes}>Notificaciones</Button></ToastContainer>
             </Anchor>
           </Drawer>

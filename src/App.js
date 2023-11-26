@@ -35,6 +35,7 @@ const activarMensajes = async ()=> {
 
 function App() {
   loguearse();
+  activarMensajes()
   useEffect(() => {
     
     onMessage(messaging, (message) => {
