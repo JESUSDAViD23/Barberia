@@ -1,10 +1,11 @@
-import React, { useDebugValue } from 'react';
+
 import './App.css';
 import {getAuth, signInAnonymously} from "firebase/auth";
 import { messaging } from './firebase';
 import { getToken, onMessage } from 'firebase/messaging';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import React, { useEffect } from 'react';
 
 
 import AppHeader from './components/common/header';
@@ -29,17 +30,34 @@ const activarMensajes = async ()=> {
 }
 
 
+  
+
 
 function App() {
+  loguearse();
+  useEffect(() => {
+    
+    onMessage(messaging, (message) => {
+      console.log("tu mensaje:", message);
+      toast(message.notification.title);
+      
+
+    });
+  }, []);
   return (
     
+
     <Layout className="mainLayout">
-      <ToastContainer />
-<button onClick={loguearse}> Loguearse</button>
-<button
-onClick={activarMensajes}
-> Recibir noti</button>
-            
+      
+      <Header>
+        <AppHeader/>
+      </Header>
+      <Content>
+        <AppHome/>
+      </Content>
+      <Footer>
+        <AppFooter/>  
+      </Footer>      
     </Layout>
   );
 }
