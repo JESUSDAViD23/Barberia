@@ -15,6 +15,11 @@ function AppHeader() {
     setVisible(false);
   };
 
+  
+    const linkStyle = {
+      color: 'red', // Cambia 'red' al color que desees
+    };
+  
 
 
   return (
@@ -26,7 +31,7 @@ function AppHeader() {
         </div>
         <div className="mobileHidden">
           <Anchor targetOffset="65">
-          <Link href="#hero" title="Inicio" />
+          <Link href="#hero" title="Inicio" style={linkStyle}/>
             <Link href="#about" title="Acerca de" />
             <Link href="#feature" title="Características" />
             <Link href="#works" title="Cómo trabajamos" />
@@ -40,6 +45,7 @@ function AppHeader() {
           <Drawer
             width={180} 
             placement="right"
+            backgroundColor={'#e1dbc8'}
             closable={false}
             onClose={onClose}
             visible={visible}

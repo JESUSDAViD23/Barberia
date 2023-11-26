@@ -9,7 +9,7 @@ const firebaseConfig = {
     storageBucket: "mensaje-pw.appspot.com",
     messagingSenderId: "943944107917",
     appId: "1:943944107917:web:c2c2c645ad8d6135791fc4",
-    measurementId: ""
+    measurementId: "G-SM20CR4QEP"
 };
 
 
@@ -21,7 +21,7 @@ messaging.onBackgroundMessage(payload => {
     const notificationTitle = payload.notification.title;
     const notificationOptions = {
         body: payload.notification.body,
-        icon: "/agua.png"
+        icon: "/public/icon-192x192.png"
     }
 
     return self.registration.showNotification(
