@@ -20,6 +20,7 @@ const loguearse =()=>{
 }
 
 const activarMensajes = async ()=> {
+  loguearse()
   const token = await getToken(messaging,{
     vapidKey: "BPNiEih4H35tIMwFHeaD-7Q7tz1mNXscAhl_HKWbav1kNu7XRbJS5IIREIrkMax0qQnJk8ZuOF5_di2CfSOcOlM"
   }).catch(error => console.log("Tuviste un error al generar el token, papá"));
@@ -34,8 +35,7 @@ const activarMensajes = async ()=> {
 
 
 function App() {
-  loguearse();
-  activarMensajes()
+  
   useEffect(() => {
     
     onMessage(messaging, (message) => {
